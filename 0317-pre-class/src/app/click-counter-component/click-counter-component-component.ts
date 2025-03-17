@@ -9,7 +9,9 @@ import { Component } from '@angular/core';
 })
 export class ClickCounterComponent {
   number = 0;
-  increaseNumber() {
+  increaseNumber(): void {
+    console.log('Button clicked', this.number);
     this.number++;
+    console.log('Button clicked', this.number);
   }
 }
