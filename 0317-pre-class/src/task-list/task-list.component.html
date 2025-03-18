@@ -2,9 +2,11 @@
 <button (click)="addTask()">Add task</button>
 
 <ul>
-  @for (let task of tasks){
+  @for (task of tasks; track task.id){
   <li>{{ task }}</li>
   }@empty {
   <p>No tasks at the moment!</p>
   }
 </ul>
+
+@for (item of items; track $index) {}
